@@ -1,0 +1,447 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #34495e;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --text-color: #2c3e50;
+    --text-light: #7f8c8d;
+    --border-color: #bdc3c7;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+/* ===== HEADER - КАК В ПРИМЕРЕ ===== */
+#site-header {
+    background: #3498db;
+    color: white;
+    padding: 1rem 0;
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    border-radius: 50%;
+    border: 3px solid white;
+    width: 60px;
+    height: 60px;
+}
+
+.site-name {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+}
+
+/* Навигация под шапкой */
+.main-menu {
+    width: 100%;
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.main-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.main-menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.site-title {
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--secondary-color);
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.site-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    width: 100%;
+}
+
+section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--primary-color);
+    font-size: 1.8em;
+}
+
+/* ===== LISTS ===== */
+ul, ol {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.8rem;
+    padding-left: 0.5rem;
+}
+
+/* ===== LINKS ===== */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* ===== IMAGE MAP ===== */
+.image-map-container {
+    position: relative;
+    display: inline-block;
+    margin: 1rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    max-width: 100%;
+}
+
+.image-map-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== TABLE ===== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.data-table th,
+.data-table td {
+    padding: 1rem;
+    text-align: left;
+    border: none;
+}
+
+.data-table th {
+    background: #3498db;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.data-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.data-table tbody tr:hover {
+    background-color: #e8f4fc;
+}
+
+/* ===== FORM ===== */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-top: 0.3rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: var(--light-color);
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.radio-group,
+.checkbox-group {
+    display: inline-block;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+    transform: scale(1.2);
+}
+
+select[multiple] {
+    height: 150px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background: #3498db;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background: #2980b9;
+}
+
+/* ===== FOOTER - КАК В ПРИМЕРЕ ===== */
+#site-footer {
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+#site-footer p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
+
+/* Планшеты */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .main-menu ul {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .main-menu a {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .site-title {
+        font-size: 2em;
+        margin: 1.5rem 0;
+    }
+    
+    section {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    section h2 {
+        font-size: 1.6em;
+    }
+    
+    /* Адаптивная таблица с прокруткой */
+    .table-container {
+        overflow-x: auto;
+        margin: 1rem 0;
+    }
+    
+    .data-table {
+        min-width: 600px;
+        font-size: 0.9rem;
+    }
+    
+    .data-table th,
+    .data-table td {
+        padding: 0.8rem 0.5rem;
+    }
+}
+
+/* Мобильные телефоны */
+@media (max-width: 480px) {
+    .header-top {
+        gap: 0.3rem;
+    }
+    
+    .site-name {
+        font-size: 1.5em;
+    }
+    
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .main-menu ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    
+    .main-menu a {
+        width: 200px;
+        text-align: center;
+    }
+    
+    .site-title {
+        font-size: 1.6em;
+        margin: 1rem 0;
+    }
+    
+    section {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    section h2 {
+        font-size: 1.4em;
+    }
+    
+    /* Улучшения для очень маленьких экранов */
+    .data-table {
+        min-width: 500px;
+        font-size: 0.8rem;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea,
+    select {
+        padding: 0.7rem;
+        font-size: 16px;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 360px) {
+    .site-name {
+        font-size: 1.3em;
+    }
+    
+    .main-menu a {
+        width: 180px;
+        font-size: 0.9rem;
+    }
+    
+    .site-title {
+        font-size: 1.4em;
+    }
+    
+    section {
+        padding: 0.8rem;
+    }
+}
+
+/* Стили для скроллбара */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
