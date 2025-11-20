@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Кнопка открытия */
 .open-btn {
     margin: 40px;
     padding: 12px 20px;
@@ -10,69 +11,83 @@ body {
     cursor: pointer;
 }
 
-/* Попап */
+/* --- ПОПАП --- */
 .popup {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0,0,0,0.65);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
+    padding: 20px;
 }
 
 .hidden {
     display: none;
 }
 
+/* --- ОКНО ПО ЦЕНТРУ --- */
 .popup-content {
     background: #fff;
-    padding: 20px 25px;
-    border-radius: 12px;
-    width: 90%;
+    padding: 25px 30px;
+    border-radius: 14px;
+
+    width: 100%;
     max-width: 420px;
-    max-height: 90vh;
-    overflow-y: auto;
+
+    box-shadow: 0 0 25px rgba(0,0,0,0.25);
+
     position: relative;
+    animation: fadeIn 0.2s ease-out;
 }
 
+/* Анимация плавного появления */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Кнопка закрытия */
 .close-btn {
     position: absolute;
     top: 10px;
     right: 12px;
-    font-size: 26px;
+    font-size: 28px;
     background: none;
     border: none;
     cursor: pointer;
 }
 
+/* --- Форма --- */
 form label {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 6px;
     border: 1px solid #ccc;
     border-radius: 6px;
+    font-size: 14px;
 }
 
 textarea {
     resize: vertical;
-    height: 100px;
+    height: 110px;
 }
 
 .checkbox {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin: 12px 0;
 }
 
+/* Кнопка отправки */
 .submit-btn {
     width: 100%;
     padding: 12px;
@@ -84,7 +99,9 @@ textarea {
     font-size: 16px;
 }
 
+/* Статус сообщения */
 .status {
     margin-top: 10px;
     font-weight: bold;
+    text-align: center;
 }
