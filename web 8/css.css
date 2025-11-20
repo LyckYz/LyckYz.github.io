@@ -3,52 +3,47 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Кнопка открытия */
+/* Кнопка */
 .open-btn {
-    margin: 40px;
     padding: 12px 20px;
-    font-size: 18px;
+    margin: 40px;
     cursor: pointer;
 }
 
-/* --- ПОПАП --- */
+/* Тёмный фон */
 .popup {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.6);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
-    padding: 20px;
+
+    z-index: 1000;
 }
 
 .hidden {
     display: none;
 }
 
-/* --- ОКНО ПО ЦЕНТРУ --- */
-.popup-content {
+/* Окно по центру */
+.popup-window {
     background: #fff;
     padding: 25px 30px;
-    border-radius: 14px;
-
-    width: 100%;
+    border-radius: 12px;
+    width: 90%;
     max-width: 420px;
 
-    box-shadow: 0 0 25px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
     position: relative;
-    animation: fadeIn 0.2s ease-out;
 }
 
-/* Анимация плавного появления */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Кнопка закрытия */
+/* Крестик */
 .close-btn {
     position: absolute;
     top: 10px;
@@ -59,37 +54,35 @@ body {
     cursor: pointer;
 }
 
-/* --- Форма --- */
+/* Поля формы */
 form label {
-    display: block;
-    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
-input,
-textarea {
+input, textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border: 1px solid #ccc;
+    padding: 9px;
     border-radius: 6px;
+    border: 1px solid #ccc;
     font-size: 14px;
 }
 
 textarea {
     resize: vertical;
-    height: 110px;
+    height: 90px;
 }
 
+/* Чекбокс с текстом */
 .checkbox {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 12px 0;
 }
 
 /* Кнопка отправки */
 .submit-btn {
-    width: 100%;
     padding: 12px;
     background: #0077ff;
     color: white;
@@ -99,9 +92,6 @@ textarea {
     font-size: 16px;
 }
 
-/* Статус сообщения */
 .status {
-    margin-top: 10px;
-    font-weight: bold;
     text-align: center;
 }
